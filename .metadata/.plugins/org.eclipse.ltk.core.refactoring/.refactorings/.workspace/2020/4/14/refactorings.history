@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;driver_stm32f407G/Src/main.c&apos;" deleteContents="false" description="Delete resource &apos;driver_stm32f407G/Src/main.c&apos;" element1="/driver_stm32f407G/Src/main.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1585989173812"/>
+</session>

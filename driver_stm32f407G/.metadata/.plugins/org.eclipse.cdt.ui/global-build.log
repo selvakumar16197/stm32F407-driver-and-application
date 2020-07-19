@@ -1,0 +1,24 @@
+14:41:14 **** Incremental Build of configuration Debug for project stm32f4xx_drivers ****
+make all 
+arm-none-eabi-gcc "../src/007spi_txonly_arduino.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DSTM32F407G_DISC1 -DDEBUG -c -I"C:/Users/Anand/Desktop/hardware technical document/MCU/MasteringMCU-master/Resources/Source_code/Workspace/stm32f4xx_drivers/drivers/inc" -O0 -ffunction-sections -Wall -fstack-usage -MMD -MP -MF"src/007spi_txonly_arduino.d" -MT"src/007spi_txonly_arduino.o"  -mfloat-abi=soft -mthumb -o "src/007spi_txonly_arduino.o"
+arm-none-eabi-gcc -o "stm32f4xx_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Anand\Desktop\hardware technical document\MCU\MasteringMCU-master\Resources\Source_code\Workspace\stm32f4xx_drivers\LinkerScript.ld" -Wl,-Map="stm32f4xx_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon  -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f4xx_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f4xx_drivers.elf  > "stm32f4xx_drivers.list"
+Finished building: stm32f4xx_drivers.list
+ 
+arm-none-eabi-objcopy  -O binary  stm32f4xx_drivers.elf  "stm32f4xx_drivers.bin"
+Finished building: stm32f4xx_drivers.bin
+ 
+arm-none-eabi-size   stm32f4xx_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3016	   1080	   1068	   5164	   142c	stm32f4xx_drivers.elf
+Finished building: default.size.stdout
+ 
+14:41:22 **** Incremental Build of configuration Debug for project stm32f4xx_drivers ****
+make all 
+arm-none-eabi-size   stm32f4xx_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3016	   1080	   1068	   5164	   142c	stm32f4xx_drivers.elf
+Finished building: default.size.stdout
+ 

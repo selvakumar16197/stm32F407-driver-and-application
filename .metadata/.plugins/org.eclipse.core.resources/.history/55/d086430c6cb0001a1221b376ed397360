@@ -1,0 +1,22 @@
+/*
+ * stm32f407xx_uartdriver.c
+ *
+ *  Created on: 15-Jun-2020
+ *      Author: Selva Kumar
+ */
+
+#include "stm32f407xx_uartdriver.h"
+
+
+void USART_PeripheralControl(USART_RegDef_t *pUSARTx, uint8_t Cmd)
+{
+	if(Cmd == ENABLE)
+	{
+		pUSARTx->USART_CR1 |= (1 << USART_CR1_UE);
+	}
+	else
+	{
+		pUSARTx->USART_CR1 &= ~(1 << USART_CR1_UE);
+	}
+}
+

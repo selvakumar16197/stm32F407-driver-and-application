@@ -1,0 +1,20 @@
+15:27:16 **** Incremental Build of configuration Debug for project interrupt ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -c -I../USB_HOST/App -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../USB_HOST/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc -o "interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\workspace STM\interrupt\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: interrupt.elf
+ 
+arm-none-eabi-objdump -h -S  interrupt.elf  > "interrupt.list"
+arm-none-eabi-objcopy  -O binary  interrupt.elf  "interrupt.bin"
+arm-none-eabi-size   interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30364	    152	   3520	  34036	   84f4	interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: interrupt.bin
+ 
+Finished building: interrupt.list
+ 
+
+15:27:19 Build Finished. 0 errors, 0 warnings. (took 2s.893ms)
+

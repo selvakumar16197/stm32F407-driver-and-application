@@ -1,0 +1,8 @@
+"Src/syscalls.o"
+"Src/sysmem.o"
+"Src/uart_tx.o"
+"Startup/startup_stm32f407vgtx.o"
+"driver/Src/stm32f407xx_gpiodriver.o"
+"driver/Src/stm32f407xx_rcc_driver.o"
+"driver/Src/stm32f407xx_spidriver.o"
+"driver/Src/stm32f407xx_uartdriver.o"

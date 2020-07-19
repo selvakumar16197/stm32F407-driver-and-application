@@ -1,0 +1,31 @@
+19:35:21 **** Build of configuration Debug for project driver_stm32f407G ****
+make -j4 all 
+arm-none-eabi-gcc "../driver/Src/stm32f407xx_gpiodriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"driver/Src/stm32f407xx_gpiodriver.d" -MT"driver/Src/stm32f407xx_gpiodriver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "driver/Src/stm32f407xx_gpiodriver.o"
+arm-none-eabi-gcc "../driver/Src/stm32f407xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"driver/Src/stm32f407xx_rcc_driver.d" -MT"driver/Src/stm32f407xx_rcc_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "driver/Src/stm32f407xx_rcc_driver.o"
+arm-none-eabi-gcc "../driver/Src/stm32f407xx_spidriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"driver/Src/stm32f407xx_spidriver.d" -MT"driver/Src/stm32f407xx_spidriver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "driver/Src/stm32f407xx_spidriver.o"
+arm-none-eabi-gcc "../driver/Src/stm32f407xx_uartdriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"driver/Src/stm32f407xx_uartdriver.d" -MT"driver/Src/stm32f407xx_uartdriver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "driver/Src/stm32f407xx_uartdriver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart_tx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"D:/workspace STM/driver_stm32f407G/driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart_tx.d" -MT"Src/uart_tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/uart_tx.o"
+arm-none-eabi-gcc -o "driver_stm32f407G.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\workspace STM\driver_stm32f407G\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="driver_stm32f407G.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: driver_stm32f407G.elf
+ 
+arm-none-eabi-size   driver_stm32f407G.elf 
+arm-none-eabi-objdump -h -S  driver_stm32f407G.elf  > "driver_stm32f407G.list"
+arm-none-eabi-objcopy  -O binary  driver_stm32f407G.elf  "driver_stm32f407G.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3712	   1052	   1604	   6368	   18e0	driver_stm32f407G.elf
+Finished building: default.size.stdout
+ 
+Finished building: driver_stm32f407G.list
+Finished building: driver_stm32f407G.bin
+ 
+ 
+20:57:29 **** Incremental Build of configuration Debug for project driver_stm32f407G ****
+make -j4 all 
+arm-none-eabi-size   driver_stm32f407G.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3712	   1052	   1604	   6368	   18e0	driver_stm32f407G.elf
+Finished building: default.size.stdout
+ 

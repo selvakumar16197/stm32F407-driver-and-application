@@ -1,0 +1,7 @@
+stm32f407xx_spidriver.c:14:9:SPI_GetFlagStatus	16	static
+stm32f407xx_spidriver.c:23:6:SPI_PeriClkControl	16	static
+stm32f407xx_spidriver.c:62:6:SPI_Init	24	static
+stm32f407xx_spidriver.c:110:6:SPI_SendData	24	static
+stm32f407xx_spidriver.c:137:6:SPI_PeripheralControl	16	static
+stm32f407xx_spidriver.c:149:6:SPI_SSOEConfig	16	static
+stm32f407xx_spidriver.c:161:6:SPI_SSIConfig	16	static
